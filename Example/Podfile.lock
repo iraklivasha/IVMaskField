@@ -1,0 +1,16 @@
+PODS:
+  - IVMaskField (0.1.0)
+
+DEPENDENCIES:
+  - IVMaskField (from `../`)
+
+EXTERNAL SOURCES:
+  IVMaskField:
+    :path: ../
+
+SPEC CHECKSUMS:
+  IVMaskField: 8fe5a519172bf6405e305a9af941aa7565d030c8
+
+PODFILE CHECKSUM: f4f02ef2737853f95e9baefe2c50a4c0ab40cc76
+
+COCOAPODS: 1.4.0

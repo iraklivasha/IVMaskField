@@ -1,0 +1,6 @@
+framework module IVMaskField {
+  umbrella header "IVMaskField-umbrella.h"
+
+  export *
+  module * { export * }
+}

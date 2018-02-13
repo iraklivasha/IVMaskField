@@ -15,9 +15,9 @@
 		607FACE51AFB9204008FA782 /* IVMaskField_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IVMaskField_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		64D77597CF48FB030C806DCB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		7A291CA216B2DB2175F5C7CD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		7ACEAC4441104B1ECB466F13 /* IVMaskField.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = IVMaskField.podspec; path = ../IVMaskField.podspec; sourceTree = "<group>"; };
+		64D77597CF48FB030C806DCB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		7A291CA216B2DB2175F5C7CD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		7ACEAC4441104B1ECB466F13 /* IVMaskField.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = IVMaskField.podspec; path = ../IVMaskField.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8A61F1506CDD42CA4CC0419C /* Pods_IVMaskField_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IVMaskField_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAC824C7C4B8E701BED61DBD /* Pods-IVMaskField_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IVMaskField_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IVMaskField_Tests/Pods-IVMaskField_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F90C08B7AB9E6E22010CE2C4 /* Pods-IVMaskField_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IVMaskField_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IVMaskField_Tests/Pods-IVMaskField_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -131,10 +131,6 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					607FACCF1AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
-					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0900;
