@@ -122,18 +122,14 @@ public class IVMaskField : UITextField {
     }
     
     private func stringByRemovingEscapeStrings(string: String, andPreserveCursor cursor: inout Int) -> String {
-        let original: Int = cursor
-        var result = String()
-        for i in 0..<string.count {
-            let c = string[i];
-            if String(c) != self.escapeString {
-                result.append(c)
-            } else if i < original {
-                cursor -= 1
-            }
+        
+        let count = string.components(separatedBy: self.escapeString).count - 1
+        if count < 0 {
+            return string
         }
         
-        return result
+        cursor -= (count * self.escapeString.count)
+        return string.replacingOccurrences(of: self.escapeString, with: "")
     }
     
     private func reformat(string: String, andPreserveCursor cursor: inout Int) -> String {
@@ -142,7 +138,7 @@ public class IVMaskField : UITextField {
         if let fmt = self.format {
             
             let original = cursor
-            let components = fmt.components(separatedBy: self.escapeString)
+            let components = fmt.components(separatedBy: self.escapeString).filter({ $0 != "" })
             
             var indices = [Int]()
             var position = 0
@@ -155,7 +151,14 @@ public class IVMaskField : UITextField {
                 }
             }
             
+            var formatAppended = false
             for i in 0..<string.count {
+                
+                if !formatAppended && fmt.starts(with: self.escapeString) {
+                    result.append(self.escapeString)
+                    cursor += self.escapeString.count
+                    formatAppended = true
+                }
                 
                 let c = string[i]
                 result.append(c)
@@ -166,6 +169,11 @@ public class IVMaskField : UITextField {
                         cursor += self.escapeString.count
                     }
                 }
+            }
+            
+            if fmt.hasSuffix(self.escapeString) && result.count == fmt.count - self.escapeString.count {
+                result.append(self.escapeString)
+                cursor += self.escapeString.count
             }
         }
         
@@ -179,7 +187,7 @@ public class IVMaskField : UITextField {
         if let fmt = self.format {
             
             let original: Int = cursor
-            let components = fmt.components(separatedBy: self.escapeString)
+            let components = fmt.components(separatedBy: self.escapeString).filter({ $0 != "" })
             
             var indices = [Int]()
             var position = 0
@@ -192,12 +200,20 @@ public class IVMaskField : UITextField {
                 }
             }
             
+            var formatAppended = false
+            
             for i in 0..<string.count {
                 if indices.contains(i) {
                     result.append(self.escapeString)
                     if i < original {
                         cursor += self.escapeString.count
                     }
+                }
+                
+                if !formatAppended && fmt.starts(with: self.escapeString) {
+                    result.append(self.escapeString)
+                    cursor += self.escapeString.count
+                    formatAppended = true
                 }
                 
                 let c = string[i]
@@ -214,3 +230,4 @@ extension String {
         return self[index(startIndex, offsetBy: i)]
     }
 }
+
