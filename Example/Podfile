@@ -1,0 +1,6 @@
+use_frameworks!
+target 'IVMaskField_Tests' do
+  pod 'IVMaskField', :path => '../'
+  
+  
+end
