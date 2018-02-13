@@ -22,7 +22,7 @@ pod 'IVMaskField'
 
 ## Author
 
-iraklivasha, irakli.vashakidze@yahoo.com
+iraklivasha, iraklivashaka@gmail.com
 
 ## License
 
