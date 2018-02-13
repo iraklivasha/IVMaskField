@@ -6,13 +6,13 @@
 //
 import UIKit
 
-protocol IVMaskFieldDelegate : class {
+public protocol IVMaskFieldDelegate : class {
     func maskField(textChanged sender : IVMaskField,
                    newText: String?,
                    at position: UITextPosition?)
 }
 
-class IVMaskField : UITextField {
+public class IVMaskField : UITextField {
     
     private var prevText        : String?
     private var prevFormatted   : String?
@@ -22,31 +22,31 @@ class IVMaskField : UITextField {
         return _originalText
     }
     
-    weak var maskDelegate : IVMaskFieldDelegate?
+    public weak var maskDelegate : IVMaskFieldDelegate?
     
-    var format : String? {
+    public var format : String? {
         didSet {
             self.text = ""
         }
     }
     
-    var escapeString: String = "" {
+    public var escapeString: String = "" {
         didSet {
             self.text = ""
         }
     }
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         self.configure()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.configure()
     }
     
-    init() {
+    public init() {
         super.init(frame: CGRect.zero)
         self.configure()
     }
@@ -57,7 +57,7 @@ class IVMaskField : UITextField {
                        for: UIControlEvents.editingChanged);
     }
     
-    var initialText : String? {
+    public var initialText : String? {
         didSet {
             self.text = initialText
             self.reformat(sender: self)
