@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'IVMaskField'
-  s.version          = '1.1.1'
+  s.version          = '1.2'
   s.summary          = 'UITextField subclass with input mask support'
   s.homepage         = 'https://github.com/iraklivasha/IVMaskField'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
