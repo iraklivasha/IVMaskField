@@ -9,5 +9,5 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.source_files = 'IVMaskField/**/*'
   s.frameworks = 'UIKit'
-  s.swift_version = '>= 3.2, <= 4.0'
+  s.swift_version = '3.2'
 end
