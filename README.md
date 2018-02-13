@@ -5,13 +5,20 @@
 [![License](https://img.shields.io/cocoapods/l/IVMaskField.svg?style=flat)](http://cocoapods.org/pods/IVMaskField)
 [![Platform](https://img.shields.io/cocoapods/p/IVMaskField.svg?style=flat)](http://cocoapods.org/pods/IVMaskField)
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+## Preview
 
 ![Preview](https://media.giphy.com/media/1sxrwcSQTGC1AbvyS8/giphy.gif "Preview")
 
-## Requirements
+## Description
+IVMaskField formats input text according configuring properties: 'format' and 'escapeString'.
+
+## Example code
+
+```ruby
+let cardInput = IVMaskField()
+cardInput.format = "xxxx-xxxx-xxxx-xxxx"
+cardInput.escapeString = "-"
+```
 
 ## Installation
 
